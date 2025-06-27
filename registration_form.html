@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stylish Registration Form</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .gender {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .gender input {
+      width: auto;
+    }
+
+    .submit-btn {
+      background: #2575fc;
+      color: white;
+      border: none;
+      margin-top: 20px;
+      cursor: pointer;
+      padding: 12px;
+    }
+
+    .submit-btn:hover {
+      background: #1a5ed1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Register</h2>
+    <form action="register.php" method="POST">
+      <label>First Name:</label>
+      <input type="text" name="first_name" required>
+
+      <label>Last Name:</label>
+      <input type="text" name="last_name" required>
+
+      <label>Username:</label>
+      <input type="text" name="username" required>
+
+      <label>Password:</label>
+      <input type="password" name="password" required>
+
+      <label>Gender:</label>
+      <div class="gender">
+        <label><input type="radio" name="gender" value="Male" required> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+      </div>
+
+      <label>State:</label>
+      <select name="state" required>
+        <option value="">Select State</option>
+        <option value="Bihar">Bihar</option>
+        <option value="Uttar Pradesh">Uttar Pradesh</option>
+        <option value="Maharashtra">Maharashtra</option>
+        <option value="Delhi">Delhi</option>
+      </select>
+
+      <label>City:</label>
+      <select name="city" required>
+        <option value="">Select City</option>
+        <option value="Patna">Patna</option>
+        <option value="Lucknow">Lucknow</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="New Delhi">New Delhi</option>
+      </select>
+
+      <input class="submit-btn" type="submit" value="Register">
+    </form>
+  </div>
+
+</body>
+</html>
+
